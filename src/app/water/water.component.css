@@ -1,0 +1,11 @@
+form > div > *{
+  margin: 0.5rem;
+}
+
+form > input {
+  float: right;
+}
+
+form > label {
+  float: left;
+}

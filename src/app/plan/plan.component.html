@@ -1,0 +1,50 @@
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand text-danger" [routerLink]="['/home']"><strong>Healthy Food</strong></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" [routerLink]="['/home']"><strong>Home</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/search']"><strong>Search</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/calendar']"><strong>Calendar</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/shoppingList']"><strong>Shopping
+                            List</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/water']"><strong>Water</strong></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <div class="h4 text-center">Choose a plan</div>
+    <div class="content">
+        <div class="alert alert-info">
+            <div>Click on one of the boxes to choose a plan</div>
+            <div>When you select a plan, meals are added to your calendar</div>
+        </div>
+        <div *ngIf="selected" class="h6 text-center">Selected Plan: Intermittent Fasting <div
+                class="btn btn-outline-primary alert-link" [routerLink]="['/calendar']">Click
+                here to view calendar</div>
+        </div>
+        <div class="grid">
+            <div *ngFor="let plan of plans" class="card col-sm-12" (click)="selectPlan($event)">
+                <div class="card-body">
+                    <h6 class="card-title">{{plan.title}}</h6>
+                    <p class="card-text">{{plan.desc}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

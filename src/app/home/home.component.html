@@ -1,0 +1,38 @@
+<div class="container col-md-10">
+    <h1 class="h1"><span class="homeLink" [routerLink]="['/home']">Healthy Food</span></h1>
+</div>
+<div class="text-center">
+    <div class="container col-md-10 m-auto">
+        <div class="row">
+            <div class="col-md-5 m-2 col-xs-4 btn btn-lg btn-danger" [routerLink]="['/search']">
+                <div class="h3">Search Food</div>
+                <i class="fa fa-3x fa-search"></i>
+            </div>
+            <div class="col-md-5 m-2 col-xs-4 btn btn-lg btn-success" [routerLink]="['/calendar']">
+                <div class="h3">Calendar</div>
+                <i class="fa fa-3x fa-calendar"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5 m-2 col-xs-4 btn btn-lg btn-secondary" [routerLink]="['/shoppingList']">
+                <div class="h3">Shopping List</div>
+                <i class="fa fa-3x fa-list"></i>
+            </div>
+            <div class="col-md-5 m-2 col-xs-4 btn btn-lg btn-primary" [routerLink]="['/water']">
+                <div class="h3">Water Consumption</div>
+                <i class="fa fa-3x fa-tint"></i>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!selected" class="container col-md-5 alert alert-secondary alert-dismissible fade show mt-5"
+        role="alert">
+        <div class="row">
+            <div class="col">You haven't selected a diet plan yet. <a class="alert-link m-1"
+                    [routerLink]="['/plan']">Cick here to choose.</a>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="close()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

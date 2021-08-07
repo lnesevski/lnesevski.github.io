@@ -1,0 +1,25 @@
+.mySearch {
+  width: 70vw;
+  margin: auto;
+}
+
+.myImage {
+  display: inline-block;
+  max-width: 150px;
+  max-height: 150px;
+  margin: 1vw;
+}
+
+.nounderline {
+  text-decoration: none !important;
+}
+
+.myPopularsDiv {
+  margin-top: 5em;
+}
+
+div[class="list-group-item"]:hover {
+  cursor: pointer;
+  background-color: #d9534f;
+  color: white
+}

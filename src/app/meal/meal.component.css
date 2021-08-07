@@ -1,0 +1,14 @@
+.myImg {
+  width: 19vw;
+  height: auto;
+}
+
+.myDiv {
+  margin: 4rem auto 6rem auto;
+  max-width: 500px;
+}
+
+.emptyList {
+  width: fit-content;
+  margin: auto;
+}

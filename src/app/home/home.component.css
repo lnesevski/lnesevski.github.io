@@ -1,0 +1,7 @@
+.homeLink {
+  cursor: pointer;
+}
+
+.homeLink:hover {
+  color: #d9534f;
+}
